@@ -1,6 +1,6 @@
 ---
 - name: testtask
-  hosts: localhost
+  hosts: local
   become: yes
   vars:
     pwd: "pass"
@@ -12,13 +12,11 @@
       user:
         name: "{{ username }}"
         password: "{ {  pwd | password_hash('sha512') } }"
-
     - name: Allow host authentication via SHH by key
       ansible.posix.authorized_key:
         user: "{{ username }}"
         state: present
         key: " {{ public_key }} "
-
     - name: Deny SSH login for root
       lineinfile:
         path: /etc/ssh/sshd_config
