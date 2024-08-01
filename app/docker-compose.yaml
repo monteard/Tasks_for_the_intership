@@ -1,0 +1,67 @@
+version: '3'
+services:
+  slave1:
+    image: nodeproject
+    deploy:
+      mode: replicated
+      
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.type == slave1
+      restart_policy: 
+        condition: on-failure
+    env_file:
+      - .env
+    environment:
+      UUID: ${HOSTNAME}  # Установка переменной окружения UUID
+    healthcheck:  # Отдельный ключ для проверки состояния
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8001/health"]  # Проверка состояния приложения
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    ports:
+      - "8001:8000"
+    
+  slave2:
+    image: nodeproject
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.type == slave2
+      restart_policy: 
+        condition: on-failure
+    env_file:
+      - .env
+    environment:
+      UUID: ${HOSTNAME}  # Установка переменной окружения UUID
+    healthcheck:  # Отдельный ключ для проверки состояния
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8002/health"] # Проверка состояния приложения
+      interval: 30s
+      timeout: 10s
+      retries: 3    
+    ports:
+      - "8002:8000"
+  slave3:
+    image: nodeproject
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.type == slave3
+      restart_policy: 
+        condition: on-failure
+    env_file:
+      - .env
+    environment:
+      UUID: ${HOSTNAME}  # Установка переменной окружения UUID
+    healthcheck:  # Отдельный ключ для проверки состояния
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8003/health"]  # Проверка состояния приложения
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    ports:
+      - "8003:8000"

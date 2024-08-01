@@ -1,0 +1,16 @@
+{
+    "name": "app-by-monteard",
+    "description": "the app with simple HTTP API",
+    "version": "1.0.0",
+    "main": "app.js",
+    "keywords": [
+        "nodejs",
+        "express"
+    ],
+    "dependencies": {
+        "express": "^4.19.2"
+    },
+    "scripts": {
+        "start": "node app.js"
+    }
+}
