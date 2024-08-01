@@ -14,9 +14,9 @@ services:
     env_file:
       - .env
     environment:
-      UUID: ${HOSTNAME}  # Установка переменной окружения UUID
-    healthcheck:  # Отдельный ключ для проверки состояния
-      test: ["CMD", "curl", "-f", "http://127.0.0.1:8001/health"]  # Проверка состояния приложения
+      UUID: ${HOSTNAME} 
+    healthcheck:  
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8001/health"]  
       interval: 30s
       timeout: 10s
       retries: 3
@@ -36,9 +36,9 @@ services:
     env_file:
       - .env
     environment:
-      UUID: ${HOSTNAME}  # Установка переменной окружения UUID
-    healthcheck:  # Отдельный ключ для проверки состояния
-      test: ["CMD", "curl", "-f", "http://127.0.0.1:8002/health"] # Проверка состояния приложения
+      UUID: ${HOSTNAME}  
+    healthcheck: 
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8002/health"] 
       interval: 30s
       timeout: 10s
       retries: 3    
@@ -57,9 +57,9 @@ services:
     env_file:
       - .env
     environment:
-      UUID: ${HOSTNAME}  # Установка переменной окружения UUID
-    healthcheck:  # Отдельный ключ для проверки состояния
-      test: ["CMD", "curl", "-f", "http://127.0.0.1:8003/health"]  # Проверка состояния приложения
+      UUID: ${HOSTNAME} 
+    healthcheck: 
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8003/health"] 
       interval: 30s
       timeout: 10s
       retries: 3
