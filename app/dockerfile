@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json package-lock.json app.js ./
 RUN npm install
 COPY . ./
-ENV uuid=${HOSTNAME}
+ENV UUID=${HOSTNAME}
 
 # Production
 FROM node:20-alpine
