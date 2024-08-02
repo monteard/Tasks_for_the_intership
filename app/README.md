@@ -15,3 +15,5 @@
 ![изображение](https://github.com/user-attachments/assets/74eaca34-7ba2-471c-b1cf-963d969beeb8)
 
 ![изображение](https://github.com/user-attachments/assets/9fe14334-8d70-491d-8673-ebad1b87bd36)
+
+По запросу запущенные контейнеры могу прокинуть из своей сети во внешнюю для просмотра.
