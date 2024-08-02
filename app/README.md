@@ -7,7 +7,7 @@
 Реализация healthcheck реализована в коде + docker compose
 `http://localhost:8001/health`
 
-Отображаются соотвественно переменные по адреса: 
+Отображаются соотвественно переменные в адресах: 
 `http://localhost:8001/hostname`
 `http://localhost:8001/id`
 `http://localhost:8001/author`
