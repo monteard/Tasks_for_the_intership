@@ -12,6 +12,6 @@
 `http://localhost:8001/id`
 `http://localhost:8001/author`
 
-  ![изображение](https://github.com/user-attachments/assets/c680b403-0416-40f3-a714-24b803dd91ce)
+![изображение](https://github.com/user-attachments/assets/74eaca34-7ba2-471c-b1cf-963d969beeb8)
 
-  ![изображение](https://github.com/user-attachments/assets/408a8258-c89b-4175-bd40-019b20374e2b)
+![изображение](https://github.com/user-attachments/assets/9fe14334-8d70-491d-8673-ebad1b87bd36)
