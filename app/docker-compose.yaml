@@ -14,7 +14,8 @@ services:
     env_file:
       - .env
     environment:
-      UUID: ${HOSTNAME} 
+      UUID: ${UUID}
+      AUTHOR: ${AUTHOR}
     healthcheck:  
       test: ["CMD", "curl", "-f", "http://127.0.0.1:8001/health"]  
       interval: 30s
@@ -36,7 +37,8 @@ services:
     env_file:
       - .env
     environment:
-      UUID: ${HOSTNAME}  
+      UUID: ${UUID}
+      AUTHOR: ${AUTHOR} 
     healthcheck: 
       test: ["CMD", "curl", "-f", "http://127.0.0.1:8002/health"] 
       interval: 30s
@@ -57,7 +59,8 @@ services:
     env_file:
       - .env
     environment:
-      UUID: ${HOSTNAME} 
+      UUID: ${UUID}
+      AUTHOR: ${AUTHOR}
     healthcheck: 
       test: ["CMD", "curl", "-f", "http://127.0.0.1:8003/health"] 
       interval: 30s
