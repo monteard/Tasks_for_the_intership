@@ -4,9 +4,6 @@
 - AUTHOR
 - UUID
 
-Реализация healthcheck реализована в коде + docker compose, по адресу:
-`http://localhost:8001/health`
-
 Отображаются соотвественно переменные в адресах: 
 `http://localhost:8001/hostname`
 `http://localhost:8001/id`
